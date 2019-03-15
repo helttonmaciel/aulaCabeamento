@@ -106,7 +106,7 @@
 
 \preauthor{\begin{flushleft}
 					\large \lineskip 0.5em \usefont{OT1}{phv}{b}{sl} \color{DarkRed}}
-\author{Heltton Mendonça Mendes Maciell }  	% Author name goes here
+\author{Heltton Mendonça Mendes Maciel }  	% Author name goes here
 
 
 \postauthor{\footnotesize \usefont{OT1}{phv}{m}{sl} \color{Black} 
@@ -166,13 +166,12 @@ Esse projeto prevê a interligação logica entre as unidades, a construção da
 %% ====================================
 %% ====================================
 \section{Introdução}
-Explique nesta primeira seção qual seria o perfil do caso. Perfil do cliente, quantidade de colaboradores, quantidade de equipamentos de TI atualmente.
+	A transportadora JSG é uma empresa de grande porte com duas unidades na cidade de Curitiba, é responsável pelo transporte dos caminhões que saem da fábrica da Volvo, tratores e colheitadeiras da fábrica da CNH, transporte dos carros da Renault, Nissan e Audi além de atender a demanda de transporte de peças e demais equipamentos das fabricas mencionadas. 
+	A empresa atualmente conta com 800 funcionários e aproximadamente 600 desktops/notebooks, 100 coletores de dados, 30 impressoras, aproximadamente 20 equipamentos de rede entre switchs(não gerenciáveis) e hubs e um data center com aproximadamente 8 servidores.
+	Esse projeto de redes tem como intuito resolver o problema de quedas, lentidão e segurança relatada pelo cliente, para isso faremos uma nova rede não aproveitando nada da estrutura anterior, será feito a instalação de todos os cabos, ligação entre os switchs, antenas wireless, instalação de equipamentos gerenciáveis, padronizar os ativos de rede com a marca CISCO, criar toda a infraestrutura física e lógica, realizar a “ligação” logica entre as duas unidades da empresa através da tecnologia CISCO ASA.
 
-Indique também nesta seção o escopo do projeto.
-
-Apresente um overview do parque tecnológico do caso.
 \subsection{Benefícios}
-Explique quais seriam os benefícios provenientes após a execução deste projeto.
+Após a implantação da nova rede a transportadora JSG terá uma melhor estabilidade na rede da empresa, cabeamento estruturado, documentação da rede, maior segurança tanto logica quanto física, disponibilidade, rede preparada para futura expansão caso necessário, fácil gerenciamento por parte do time de T.I.
 
 \subsection{Organizações Envolvidas}
 Coloque o nome de todas as organizações envolvidas. Se for um projeto real, identifique quais as responsabilidades de cada uma das organizações. É comum que em um projeto de redes (cabeamento), temos várias organizações, sendo que cada uma delas com uma determinada responsabilidade.
@@ -180,29 +179,58 @@ Coloque o nome de todas as organizações envolvidas. Se for um projeto real, id
 Sugestão: crie uma tabela contento a relação delas.
 
 
+\begin{tabular}{|l|l|}
+\hline
+{\color[HTML]{000000} Responsável}      & {\color[HTML]{000000} Atividade}                                                                                                                                                                                                                                                              \\ \hline
+{\color[HTML]{000000} Facilites JSG}    & {\color[HTML]{000000} \begin{tabular}[c]{@{}l@{}}Infraestrutura física para passagem dos cabos,\\ fixação de racks, canaletas, \\ eletrocalhas e toda a parte física na construção\\ da infra necessária.\end{tabular}}                                                                       \\ \hline
+{\color[HTML]{000000} Empresa Newtec}   & {\color[HTML]{000000} \begin{tabular}[c]{@{}l@{}}Passagem dos cabos UTP e fibra óptica, fusão \\ de fibra, instalação DIO’S(Distribuidor\\ interno óptico) crimpar cabos, instalação dos \\ patch panel, voice panel, patch\\ cord, instalação física dos switchs e roteadores.\end{tabular}} \\ \hline
+{\color[HTML]{000000} Empresa Datatecn} & {\color[HTML]{000000} Certificação do cabeamento de rede}                                                                                                                                                                                                                                     \\ \hline
+{\color[HTML]{000000} Setor de T.I}     & {\color[HTML]{000000} \begin{tabular}[c]{@{}l@{}}Responsável pelo acompanhamento de toda parte \\ física e de total responsabilidade da\\ configuração lógica.\end{tabular}}                                                                                                                  \\ \hline
+\end{tabular}
 
 \section{Estado atual}
-Aprente o estado atual da rede. Caso não tenha rede, desconsiderar esta seção.
-
-Caso tenha rede, deixe claro:
-\begin{itemize}
-	\item os passivos de rede atuais:path panels, cabos, etc..;
-	\item as principais reclamações dos usuários. Qual o principal motivo da reestruturação? Efetue uma pesquisa junto aos colaboradores para determinar quais problemas a rede apresenta.
-	\item Observações. Analise a rede e verifique se há estruturas que não se enquadram nas normas ou que indicam suspeita de problemas.
-\end{itemize}
+	Atualmente a rede da transportadora JSG não possui nenhum tipo de cabeamento estruturado, documentação, padronização de equipamentos e composta em sua grande maioria de Hubs “cascateado”.  
+	Cabeamento antigos e danificados, tecnologia obsoleta, dessa forma não ser aproveitado os passivos de rede que se encontram na empresa.
+	O principal motivo que a empresa resolveu reestruturar sua empresa é devido à enorme quantidade de falhas, indisponibilidades, lentidão, segurança da rede, precária comunicação com a outra unidade.
 
 \section{Requisitos}
-Crie uma enumeração dos requisitos do projeto.
+
+
+\begin{tabular}{l}
+{\color[HTML]{000000} 1 Nova infraestrutura}                              \\
+{\color[HTML]{000000} 2 Novo Cabeamento}                                  \\
+{\color[HTML]{000000} 3 Novos equipamentos padronizados CISCO}            \\
+{\color[HTML]{000000} 4 Treinamento do time de T.I nas novas tecnologias} \\
+{\color[HTML]{000000} 5 Novos links de Internet}                         
+\end{tabular}
+
 
 \section{Usuários e Aplicativos}
-Explique nesta seção os usuários atuais e o perfil de crescimento, se por exemplo, há estimativa na evolução da empresa no que tange a quantidade de usuários, pontos de redes, equipamentos.
+
+Os usuários utilizam em sua grande maioria um ERP para controlar a entrada e saída das cargas, atualmente são aproximadamente 600 usuários, com um controlador de domínio AD(Active Directory). A empresa estima a criação de mais duas unidades, uma na região do ABC em São Paulo para atender montadoras de lá e outra em Sapucaia no Rio Grande do Sul, uma estimativa de mais 600 usuários e pontos de rede.
  
 
 \subsection{Usuários}
-Crie uma relação da quantidade, perfil de usuários de seu projeto.
+
+\begin{tabular}{|l|l|c|l|}
+\hline
+{\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}l@{}}Tipo\\ de Usuário\end{tabular}}} & \textbf{Setor}                                                                   & \multicolumn{1}{l|}{\textbf{Quantidade}} & \textbf{Observação}                                                                                                                                                 \\ \hline
+{\color[HTML]{000000} Administrador}                                                      & \begin{tabular}[c]{@{}l@{}}Tecnologia\\ da \\ Informação\end{tabular}            & 12                                       & \begin{tabular}[c]{@{}l@{}}Os usuários\\ de T.I são administradores locais\\ e de domínio, utilizando para \\ manutenção e continuação do \\ ambiente.\end{tabular} \\ \hline
+{\color[HTML]{000000} \begin{tabular}[c]{@{}l@{}}Key\\ User\end{tabular}}                 & \begin{tabular}[c]{@{}l@{}}Setores\\ Diversos\end{tabular}                       & 10                                       & \begin{tabular}[c]{@{}l@{}}São usuários da diretoria e gerencia\\ que possui acesso a todos os \\ sistemas da empresa.\end{tabular}                                 \\ \hline
+{\color[HTML]{000000} Administrativos}                                                    & \begin{tabular}[c]{@{}l@{}}Comercial/\\ Financeiro/\\ RH/\\ Compras\end{tabular} & 80                                       & \begin{tabular}[c]{@{}l@{}}Funcionários com acesso a ERP \\ especifico correspondente ao seu\\ setor e com acesso à internet\\ liberado.\end{tabular}               \\ \hline
+{\color[HTML]{000000} Default}                                                            & \begin{tabular}[c]{@{}l@{}}Demais\\ setores\end{tabular}                         & 488                                      & \begin{tabular}[c]{@{}l@{}}Usuários que utilizam os ERP\\ da empresa com acesso exclusivo as \\ áreas que demandam sua função.\end{tabular}                         \\ \hline
+\end{tabular}
 
 \subsection{Aplicativos}
-Crie uma relação dos aplicativos e seus níveis críticos de uso.
+
+\begin{tabular}{|l|c|l|}
+\hline
+{\color[HTML]{000000} \textbf{Aplicativo}}                                              & \multicolumn{1}{l|}{\textbf{Setor}} & \textbf{Observação}                                                                                                                                      \\ \hline
+{\color[HTML]{000000} \begin{tabular}[c]{@{}l@{}}Software\\ Green Road\end{tabular}}    & Alta                                & \begin{tabular}[c]{@{}l@{}}Software utilizado para\\ monitoramento dos caminhões,\\ é o principal software da empresa.\end{tabular}                      \\ \hline
+{\color[HTML]{000000} ERP JSG CORP}                                                     & Alta                                & \begin{tabular}[c]{@{}l@{}}Software responsável pelo \\ controle de entrada e saída das\\ cargas, geração de NF e\\ documentação de viagem.\end{tabular} \\ \hline
+{\color[HTML]{000000} \begin{tabular}[c]{@{}l@{}}ERP JSG\\ Administrativo\end{tabular}} & Alta                                & \begin{tabular}[c]{@{}l@{}}Software utilizado pelas áreas \\ administrativas, comercial e compras.\end{tabular}                                          \\ \hline
+{\color[HTML]{000000} ERP SKP}                                                          & Alta                                & \begin{tabular}[c]{@{}l@{}}Software utilizado para acompanhamento \\ das manutenções dos veículos.\end{tabular}                                          \\ \hline
+\end{tabular}
 
 
 \section{Estrutura predial existente}
@@ -223,7 +251,8 @@ Deve conter o diagrama da rede. Atente-se a redundância  e ligações truncadas
 Deve explicar todos termos e componentes utilizados nestas plantas. Por exemplo: entrance facility, work area, horizontal cabling, etc..
 
 Todos os elementos das figuras devem ser explicados. 
-Crie esboço da configuração dos racks e brackets. Explique cada um dos componentes. Você pode criar uma tabela contendo figuras dentro, ou criar uma tabela e incluí-la como imagem. Por exemplo, verifique a tabela \ref{tab1}.
+Crie esboço da configuração dos racks e brackets. Explique cada um dos componentes. Você pode criar uma 
+ contendo figuras dentro, ou criar uma tabela e incluí-la como imagem. Por exemplo, verifique a tabela \ref{tab1}.
 
 \input{tab1}
 
