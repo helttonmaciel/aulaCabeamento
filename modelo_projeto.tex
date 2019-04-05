@@ -174,19 +174,9 @@ Esse projeto prevê a interligação logica entre as unidades, a construção da
 Após a implantação da nova rede a transportadora JSG terá uma melhor estabilidade na rede da empresa, cabeamento estruturado, documentação da rede, maior segurança tanto logica quanto física, disponibilidade, rede preparada para futura expansão caso necessário, fácil gerenciamento por parte do time de T.I.
 
 \subsection{Organizações Envolvidas}
-Coloque o nome de todas as organizações envolvidas. Se for um projeto real, identifique quais as responsabilidades de cada uma das organizações. É comum que em um projeto de redes (cabeamento), temos várias organizações, sendo que cada uma delas com uma determinada responsabilidade.
-
-Sugestão: crie uma tabela contento a relação delas.
-
-
-\begin{tabular}{|l|l|}
-\hline
-{\color[HTML]{000000} Responsável}      & {\color[HTML]{000000} Atividade}                                                                                                                                                                                                                                                              \\ \hline
-{\color[HTML]{000000} Facilites JSG}    & {\color[HTML]{000000} \begin{tabular}[c]{@{}l@{}}Infraestrutura física para passagem dos cabos,\\ fixação de racks, canaletas, \\ eletrocalhas e toda a parte física na construção\\ da infra necessária.\end{tabular}}                                                                       \\ \hline
-{\color[HTML]{000000} Empresa Newtec}   & {\color[HTML]{000000} \begin{tabular}[c]{@{}l@{}}Passagem dos cabos UTP e fibra óptica, fusão \\ de fibra, instalação DIO’S(Distribuidor\\ interno óptico) crimpar cabos, instalação dos \\ patch panel, voice panel, patch\\ cord, instalação física dos switchs e roteadores.\end{tabular}} \\ \hline
-{\color[HTML]{000000} Empresa Datatecn} & {\color[HTML]{000000} Certificação do cabeamento de rede}                                                                                                                                                                                                                                     \\ \hline
-{\color[HTML]{000000} Setor de T.I}     & {\color[HTML]{000000} \begin{tabular}[c]{@{}l@{}}Responsável pelo acompanhamento de toda parte \\ física e de total responsabilidade da\\ configuração lógica.\end{tabular}}                                                                                                                  \\ \hline
-\end{tabular}
+Na tabela abaixo existe uma relação entre as empresas/setores, responsáveis pela execução de determinada atividade no projeto.\\
+ \ref{tab3}.
+\input{tab3}
 
 \section{Estado atual}
 	Atualmente a rede da transportadora JSG não possui nenhum tipo de cabeamento estruturado, documentação, padronização de equipamentos e composta em sua grande maioria de Hubs “cascateado”.  
@@ -194,192 +184,503 @@ Sugestão: crie uma tabela contento a relação delas.
 	O principal motivo que a empresa resolveu reestruturar sua empresa é devido à enorme quantidade de falhas, indisponibilidades, lentidão, segurança da rede, precária comunicação com a outra unidade.
 
 \section{Requisitos}
-
-
-\begin{tabular}{l}
-{\color[HTML]{000000} 1 Nova infraestrutura}                              \\
-{\color[HTML]{000000} 2 Novo Cabeamento}                                  \\
-{\color[HTML]{000000} 3 Novos equipamentos padronizados CISCO}            \\
-{\color[HTML]{000000} 4 Treinamento do time de T.I nas novas tecnologias} \\
-{\color[HTML]{000000} 5 Novos links de Internet}                         
-\end{tabular}
-
+\ref{tab4}.
+\input{tab4}
 
 \section{Usuários e Aplicativos}
 
 Os usuários utilizam em sua grande maioria um ERP para controlar a entrada e saída das cargas, atualmente são aproximadamente 600 usuários, com um controlador de domínio AD(Active Directory). A empresa estima a criação de mais duas unidades, uma na região do ABC em São Paulo para atender montadoras de lá e outra em Sapucaia no Rio Grande do Sul, uma estimativa de mais 600 usuários e pontos de rede.
- 
 
 \subsection{Usuários}
-
-\begin{tabular}{|l|l|c|l|}
-\hline
-{\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}l@{}}Tipo\\ de Usuário\end{tabular}}} & \textbf{Setor}                                                                   & \multicolumn{1}{l|}{\textbf{Quantidade}} & \textbf{Observação}                                                                                                                                                 \\ \hline
-{\color[HTML]{000000} Administrador}                                                      & \begin{tabular}[c]{@{}l@{}}Tecnologia\\ da \\ Informação\end{tabular}            & 12                                       & \begin{tabular}[c]{@{}l@{}}Os usuários\\ de T.I são administradores locais\\ e de domínio, utilizando para \\ manutenção e continuação do \\ ambiente.\end{tabular} \\ \hline
-{\color[HTML]{000000} \begin{tabular}[c]{@{}l@{}}Key\\ User\end{tabular}}                 & \begin{tabular}[c]{@{}l@{}}Setores\\ Diversos\end{tabular}                       & 10                                       & \begin{tabular}[c]{@{}l@{}}São usuários da diretoria e gerencia\\ que possui acesso a todos os \\ sistemas da empresa.\end{tabular}                                 \\ \hline
-{\color[HTML]{000000} Administrativos}                                                    & \begin{tabular}[c]{@{}l@{}}Comercial/\\ Financeiro/\\ RH/\\ Compras\end{tabular} & 80                                       & \begin{tabular}[c]{@{}l@{}}Funcionários com acesso a ERP \\ especifico correspondente ao seu\\ setor e com acesso à internet\\ liberado.\end{tabular}               \\ \hline
-{\color[HTML]{000000} Default}                                                            & \begin{tabular}[c]{@{}l@{}}Demais\\ setores\end{tabular}                         & 488                                      & \begin{tabular}[c]{@{}l@{}}Usuários que utilizam os ERP\\ da empresa com acesso exclusivo as \\ áreas que demandam sua função.\end{tabular}                         \\ \hline
-\end{tabular}
+Abaixo a talela dos usuários:
+ \\
+\\
+\\
+\\
+\\
+ \\
+\\
+\\
+\\
+\\ 
+\\
+\\
+\\
+\\
+\\
+ \ref{tab5}.
+\input{tab5}
 
 \subsection{Aplicativos}
-
-\begin{tabular}{|l|c|l|}
-\hline
-{\color[HTML]{000000} \textbf{Aplicativo}}                                              & \multicolumn{1}{l|}{\textbf{Setor}} & \textbf{Observação}                                                                                                                                      \\ \hline
-{\color[HTML]{000000} \begin{tabular}[c]{@{}l@{}}Software\\ Green Road\end{tabular}}    & Alta                                & \begin{tabular}[c]{@{}l@{}}Software utilizado para\\ monitoramento dos caminhões,\\ é o principal software da empresa.\end{tabular}                      \\ \hline
-{\color[HTML]{000000} ERP JSG CORP}                                                     & Alta                                & \begin{tabular}[c]{@{}l@{}}Software responsável pelo \\ controle de entrada e saída das\\ cargas, geração de NF e\\ documentação de viagem.\end{tabular} \\ \hline
-{\color[HTML]{000000} \begin{tabular}[c]{@{}l@{}}ERP JSG\\ Administrativo\end{tabular}} & Alta                                & \begin{tabular}[c]{@{}l@{}}Software utilizado pelas áreas \\ administrativas, comercial e compras.\end{tabular}                                          \\ \hline
-{\color[HTML]{000000} ERP SKP}                                                          & Alta                                & \begin{tabular}[c]{@{}l@{}}Software utilizado para acompanhamento \\ das manutenções dos veículos.\end{tabular}                                          \\ \hline
-\end{tabular}
-
-
+ \ref{tab6}.
+\input{tab6}
 \section{Estrutura predial existente}
 
-Explique aqui a planta física dos prédios
-Pode ser anexada, em escala ou não.
+A estrutura predial da empresa consta de duas unidades, uma onde ficam armazenados os carros para transporte e peças, a outra unidade é referente a area administrativa. As unidades estão há uma distância de 5 km cada uma e serão conectadas via VPN.
+Todos os switchs de ambas unidades são interligados através de fibra óptica até o switch core existente em cada unidade, o switch Core é o Cisco 6509 e os switchs dos "racks dos setores" Switch Cisco 48 Portas Catalyst 3560
+A unidade 1 possui 4 andares, dispostos da seguinte maneira:
 
-Deve conter uma descrição geral, indicando a possível distância entre os pontos de rede e restrições de instalação.
+\begin{figure}
+	\centering
+	\includegraphics[]{fig1}
+	\caption{Planta Física - Unidade 1 e 2}
+	\label{fig1}
+\end{figure}
 
-\section{Planta Lógica - Elementos estruturados}
+\begin{figure}
+	\centering
+	\includegraphics[]{fig2}
+	\caption{Planta Física - Unidade 1 Térreo}
+	\label{fig2}
+\end{figure}
+
+Departamento Financeiro
+
+1 Rack com 2 Switch Cisco Catalyst 3560 48 Portas
+2 Furukawa Patch Panel 48P 1U
+DIO Distribuidor Interno Optico utilizado para interligar com o Switch Core do Data Center
+16 pontos de Rede com uma distância média entre eles de 1,5 metros
+Distância até o switch core no Data Center 30 metros
+Horário de trabalho para implantação da rede após as 18:00
+
+	
+	 Departamento Recursos Humanos
+
+Os pontos de rede é originado do rack do Departamento Financeiro
+9 pontos de Rede com uma distância média entre eles de 1,5 metros
+Uma distância média de 30 metros até o rack
+Horário de trabalho para implantação da rede após as 18:00
+
+	 Departamento Compras
+
+1 Rack com 2 Switch Cisco Catalyst 3560 48 Portas
+2 Furukawa Patch Panel 48P 1U
+Distribuidor Interno Optico utilizado para interligar com o Switch Core do Data Center
+12 pontos de Rede com uma distância média entre eles de 1,5 metros
+Distância até o switch core no Data Center 50 metros
+Horário de trabalho para implantação da rede após as 18:00
+
+
+	 Departamento Recepção
+
+Os pontos de rede é originado do rack do Departamento Financeiro
+2 pontos de Rede com uma distância média entre eles de 1,5 metros
+Uma distância média de 15 metros até o rack
+Horário de trabalho para implantação da rede após as 18:00
+
+	 Departamento Data Center
+
+Onde se encontra o Switch Core da empresa que conecta todos os demais switchs dos setores através de fibra óptica
+Rack com roteador, Cisco ASA, 2 Switch Cisco Catalyst 3560
+8 Furukawa Patch Panel 48P 1U
+Capacidade de 120 pontos de rede
+Capacidade de 120 fibras(DIOS)
+Uma distância média de 3 metros entre os racks de servidores
+Horário de trabalho para implantação da rede após as 18:00
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\begin{figure}
+	\centering
+	\includegraphics[]{fig3}
+	\caption{Planta Física - Unidade 1 Primeiro Andar}
+	\label{fig3}
+\end{figure}
+
+Departamento Central de Atendimento ao Cliente
+
+1 Rack com 2 Switch Cisco Catalyst 3560 48 Portas
+2 Furukawa Patch Panel 48P 1U
+DIO Distribuidor Interno Optico utilizado para interligar com o Switch Core do Data Center
+24 pontos de Rede com uma distância média entre eles de 1,5 metros
+Distância até o switch core no Data Center 60 metros
+Horário de trabalho para implantação da rede após as 18:00
+
+	Departamento Fiscal
+
+Os pontos de rede é originado do rack do Atendimento ao Cliente
+9 pontos de Rede com uma distância média entre eles de 1,5 metros
+Uma distância média de 15 metros até o rack
+Horário de trabalho para implantação da rede após as 18:00
+
+Departamento Controladoria
+
+1 Rack com 2 Switch Cisco Catalyst 3560 48 Portas
+2 Furukawa Patch Panel 48P 1U
+DIO Distribuidor Interno Optico utilizado para interligar com o Switch Core do Data Center
+12 pontos de Rede com uma distância média entre eles de 1,5 metros
+Distância até o switch core no Data Center 80 metros
+Horário de trabalho para implantação da rede após as 18:00
+
+	Departamento Sala Gerência
+
+Os pontos de rede é originado do rack da Controladoria
+4 pontos de Rede com uma distância média entre eles de 1,5 metros
+Uma distância média de 15 metros até o rack
+Horário de trabalho para implantação da rede após as 18:00
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\begin{figure}
+	\centering
+	\includegraphics[]{fig4}
+	\caption{Planta Física - Unidade 1 Segundo Andar}
+	\label{fig4}
+\end{figure}
+Departamento Monitoramento
+
+1 Rack com 2 Switch Cisco Catalyst 3560 48 Portas
+2 Furukawa Patch Panel 48P 1U
+DIO Distribuidor Interno Optico utilizado para interligar com o Switch Core do Data Center
+40 pontos de Rede com uma distância média entre eles de 1,5 metros
+Distância até o switch core no Data Center 100 metros
+Horário de trabalho para implantação da rede após as 18:00
+
+Departamento Comercial
+
+1 Rack com 2 Switch Cisco Catalyst 3560 48 Portas 
+2 Furukawa Patch Panel 48P 1U
+DIO Distribuidor Interno Optico utilizado para interligar com o Switch Core do Data Center
+12 pontos de Rede com uma distância média entre eles de 1,5 metros
+Distância até o switch core no Data Center 100 metros
+Horário de trabalho para implantação da rede após as 18:00
+
+Departamento Sala Diretoria
+
+Os pontos de rede é originado do rack da Comercial
+4 pontos de Rede com uma distância média entre eles de 1,5 metros
+Uma distância média de 15 metros até o rack
+Horário de trabalho para implantação da rede após as 18:00
+\\
+\\
+\\
+\\
+\begin{figure}
+	\centering
+	\includegraphics[]{fig5}
+	\caption{Planta Física - Unidade 1 Terceiro Andar}
+	\label{fig5}
+\end{figure}
+
+Departamento Facilities / Projetos / GreenRoad
+
+1 Rack com 2 Switch Cisco Catalyst 3560 48 Portas
+2 Furukawa Patch Panel 48P 1U
+DIO Distribuidor Interno Optico utilizado para interligar com o Switch Core do Data Center
+40 pontos de Rede com uma distância média entre eles de 1,5 metros
+Distância até o switch core no Data Center 130 metros
+Horário de trabalho para implantação da rede após as 18:00
+
+	Departamento Tecnologia da Informação
+
+1 Rack com 2 Switch Cisco Catalyst 3560 48 Portas
+2 Furukawa Patch Panel 48P 1U
+DIO Distribuidor Interno Optico utilizado para interligar com o Switch Core do Data Center
+20 pontos de Rede com uma distância média entre eles de 1,5 metros
+Distância até o switch core no Data Center 150 metros
+Horário de trabalho para implantação da rede após as 18:00
+
+	Departamento Tecnologia da Informação
+
+1 Rack com 2 Switch Cisco Catalyst 3560 48 Portas
+2 Furukawa Patch Panel 48P 1U
+DIO Distribuidor Interno Optico utilizado para interligar com o Switch Core do Data Center
+20 pontos de Rede com uma distância média entre eles de 1,5 metros
+Distância até o switch core no Data Center 150 metros
+Horário de trabalho para implantação da rede após as 18:00
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\begin{figure}
+	\centering
+	\includegraphics[]{fig6}
+	\caption{Planta Física - Unidade 2 Doca 1 }
+	\label{fig6}
+\end{figure}
+Rack com um Switch Core, roteador, Cisco ASA.
+4 Furukawa Patch Panel 48P 1U
+Rack com roteador, Cisco ASA, 2 Switch Cisco Catalyst 3560
+16 pontos de Rede com uma distância média entre eles de 2,0 metros
+Distância até o switch core no Data Center 20 metros
+Horário de trabalho para implantação da rede após as 18:00
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\begin{figure}
+	\centering
+	\includegraphics[]{fig7}
+	\caption{Planta Física - Unidade 2 Doca 2 }
+	\label{fig7}
+\end{figure}
+
+Rack com 2 Switch Cisco Catalyst 3560
+2 Furukawa Patch Panel 48P 1U
+48 pontos de Rede com uma distância média entre eles de 2,0 metros
+Distância até o switch core no Data Center 100 metros
+Horário de trabalho para implantação da rede após as 18:00
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\begin{figure}
+	\centering
+	\includegraphics[]{fig8}
+	\caption{Planta Física - Unidade 2 Doca 3 }
+	\label{fig8}
+\end{figure}
+Rack com 2 Switch Cisco Catalyst 3560
+2 Furukawa Patch Panel 48P 1U
+48 pontos de Rede com uma distância média entre eles de 2,0 metros
+Distância até o switch core no Data Center 250 metros
+Horário de trabalho para implantação da rede após as 18:00
 
 \subsection{Estado atual}
-Deve ter a planta atual, se for o caso
+Abaixo será explicado a planta lógica e a topologia de rede adotada.
+
 
 \subsection{Topologia}
-Proposta futura, proposta após implantação.
-Deve conter o diagrama da rede. Atente-se a redundância  e ligações truncadas.
-Deve explicar todos termos e componentes utilizados nestas plantas. Por exemplo: entrance facility, work area, horizontal cabling, etc..
+Topologia das unidades 1 e 2 representadas na figura abaixo. Cada rack com o nome do setor terá 2 switchs de 48 portas “interligados” ao switch core através de fibra óptica, haverá um switch de 48 portas “nomeado” de switch de “acesso” no qual estará ligado o roteador e também o equipamento CiscoAsa que fará a VPN entre a unidade 1 e 2.
+A unidade 1 terá 13 Switchs Cisco de 48 portas, 1 switch core 6509, 1 Cisco Asa e roteador.
+A unidade 2 terá 7 Switchs Cisco de 48 portas, 1 switch core 6509, 1 Cisco ASA e roteador.
 
-Todos os elementos das figuras devem ser explicados. 
-Crie esboço da configuração dos racks e brackets. Explique cada um dos componentes. Você pode criar uma 
- contendo figuras dentro, ou criar uma tabela e incluí-la como imagem. Por exemplo, verifique a tabela \ref{tab1}.
-
-\input{tab1}
-
+\begin{figure}
+	\centering
+	\includegraphics[]{fig9}
+	\caption{Topologia }
+	\label{fig9}
+\end{figure} 
+\begin{figure}
+	\centering
+	\includegraphics[]{fig10}
+	\caption{O rack disponível no data center de cada unidade. }
+	\label{fig10}
+\end{figure} 
+\begin{figure}
+	\centering
+	\includegraphics[]{fig11}
+	\caption{O rack disponível nos setores. }
+	\label{fig11}
+\end{figure} 
 \subsection{Encaminhamento}
-Eletrodutos, calhas, e qualquer material em que os cabos serão alojados/alocados.
-
+Os cabos entre o switch localizado em cada setor e as estações de trabalho passaram por 2 canaletas de PVC de 60X50 mm de 2 metros fixada na parede, essa canaleta sairá do rack em direção as estações de trabalho.\\
+Para interligação dos Switchs com o Switch Core no Data Center será utilizado Fibra Óptica, que passará dentro de uma Eletrocalha Perfurada de 50x100mm de três metros.
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
 \subsection{Memorial descritivo}
 
-Relacione todos os equipamentos passivos que serão utilizados, tipo, fabricante, quantidade.
+Abaixo a relação de todos os equipamentos passivos que serão utilizados no projeto:
+\ref{tab7}.
+\input{tab7}
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
 
 \subsection{Identificação dos cabos}
-Explique como os cabos serão identificados em seu projeto. Coloque uma relação dos cabos instalados e identificados.
+A identificação dos cabos de rede ocorrerá de acordo com o número do PatchPanel/Número da Porta do patch Panel.
+Os Patchpanel serão numerados em sequencia(1,2,3 e etc) e os cabos de rede serão adesivados exemplo PP01-PT01 PP é o PatchPanel 1, PT é a porta onde será conectado, todos os patchs panel serão também eles identificados. A mesma regra será utilizada na fibra óptica e DIOS, conforme imagem abaixo:
+\begin{figure}
+	\centering
+	\includegraphics[]{fig12}
+	\caption{Exemplo de identificação dos cabos}
+	\label{fig12}
+\end{figure} 
 
-\section{Implantação}
-Estabeleça um cronograma de implantação:
-Remoção de equipamentos existentes (destino para descarte), instalação dos condutores, instalação dos cabos, 
-identificação dos cabos, montagem dos racks, certificação, etc... Crie atividades e estabeleça o tempo de execução. Se for um projeto real, indique também quais os responsáveis pela execução do projeto e de cada uma das etapas.
 
-Defina marcas (e padrões) e fornecedores se for o caso. Atenção a contratados e subcontratados para a realização das atividades. Estabeleça a responsabilidade de execução da atividade e também da validação dela.
+ \section{Implantação}
+Hoje na empresa possuímos uma rede antiga ainda em operação, sendo substituído todos os equipamentos e infraestrutura antiga, a instalação dos equipamentos, infraestrutura, ocorrerá em paralelo com a existente hoje, após toda a instalação da nova infra e rede será removido e substituído a anterior.
+O Horário de trabalho durante a semana será de 22:00 as 07:00, horário que não possui trabalho nos setores não gerando impactos desta forma, as atividades ocorrerão de segunda a sábado.
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\
+ \begin{figure}
+	\centering
+	\includegraphics[]{fig13}
+	\caption{Cronograma Implantação}
+	\label{fig13}
+\end{figure} 
 
-Utilize algum software para gerear o cronograma. Excel,etc. O fundamental é dividir em etapas, descrever e estimar o tempo de cada uma delas.
 
-Segue uma relação de ferramentas:
-http://asana.com/, 
-https://trello.com/, 
-http://www.ganttproject.biz/, 
-http://www.orangescrum.org/. 
 
 \section{Plano de certificação}
-Quais seriam as etapas para a certificação? 
-Quais os locais e horários para execução da certificação na rede? Toda rede será certificada?
-Como os testes seriam executados?
-Quais relatórios de certificação serão (ou deveriam ser) entregues? 
+A certificação da rede do projeto ocorrerá com a empresa DataCen que fará essa atividade, o primeiro passo para essa certificação é avaliar as condições da rede, infraestrutura, cabeamento e etc. Com a rede “em funcionamento” será realizado a certificação.\\ 
+A certificação ocorrerá no dia 08/05/2019 com a rede em pleno funcionamento, será testado todos os pontos de rede e patch panel. 
+Os relatórios de certificação que a empresa DataCen precisa entregar são TIA/EIA, TIA/EIA-568-B.2. 
+
 
 \section{Plano de manutenção}
 
-Revisões periódicas na rede, emissão de certificados para novos pontos.
+Toda a manutenção na rede será feita em conjunto com o time de Facilites e T.I, em um cronograma estabelecido, as manutenções ocorrerá a cada 3 meses, onde será feito a vistoria em toda a infraestrutura física. \\
+A emissão de certificados de novos pontos será de responsabilidade da empresa Datatecn em um contrato anual estabelecido.
 
 \subsection{Plano de expansão}
-Existe um plano de expansão? Quantos novos pontos poderão ser acrecidos na rede, antes de migração de equipamentos na camada 2? Se houver expansão, quais equipamentos deverão ser direcionados para as estremidades da rede? 
+Todo o rack de setor possui um DIO com 4 pontos sobressalente para adição de novos switchs, além disso toda a infraestrutura foi dimensionada para suportar a passagem de mais cabos, suportando assim uma grande expansão caso seja necessária no futuro.
 
 \section{Risco}
-Enumerar e explicar os riscos do projeto.
+Toda as vezes que é realizado uma manutenção, criação ou alteração em uma rede ocorre risco para a organização que contratou ou está executando o serviço, os riscos identificados neste projeto foram:
+Rede com oscilação enquanto é construída nova infraestrutura
+Problemas de conectividade
+Rede Wifi poderá haver quedas
+Ponto de rede que possa não ter sido mapeado no projeto, o que demandará uma nova atividade local.
 
 \section{Orçamento}
-Crie uma relação de orçamentos baseado na seções anteriores.
-
+\ref{tab8}.
+\input{tab8}
 \section{Recomendações}
-Observações e recomendações para o cliente.
-
+Após a entrega da rede pronta, é necessário que a empresa sempre atualize a documentação quando houver alterações na rede, é importante que toda modificação seja realizada por profissionais ou empresa especializada.
+Toda a rede é composta de equipamento gerenciado, o que vai permitir maior segurança para a rede a partir do novo projeto.
 \section{Referências bibliográficas}
-Utilize o mendley, o jabref ou diretamente o bibtex para gerenciar suas referências biliográficas. As referências são criadas automaticamente de acordo com o uso no texto.
-
-Exemplo: Redes de computadores, segundo \cite{t2013} é considerada..... Já \cite{kurose2010} apresenta uma versão...
-
-Analisando os pressupostos de \cite{ref3} e \cite{ref4} concluimos que....
-
+TANENBAUM, Andrew S. Redes de Computadores. Rio de Janeiro, RJ: Editora
+Campus – 3ª edição, 1997.
+AWBES. Cabeamento Estruturado. Referência extraída da apostila Cabling I - Impacta
+Tecnologia 
+NETO, Vicente Soares, SILVA, Adelson de Paula, JÚNIOR, Mário Boscato C. Redes de
+Alta Velocidade – Cabeamento Estruturado. São Paulo, SP: Editora Érica – 3ª edição,
+2002.
 
 \renewcommand\refname{} %%Referências bibliográficas}  
 \bibliographystyle{ieeetr}
 \bibliography{referencias}  
 
-%% ***********************************************************************
-%% === remover daqui =====================================================
-%% ***********************************************************************
-=================================================
-\section{Elementos textuais - Alguns exemplos}
-
-Esta seção apresenta exemplos de elementos textuais. \textbf{Remova-a da versão final do texto}.
-
-
-\subsection{Colocar elementos em itens}
-
-Texto antes da lista
-
-\begin{itemize}
-	\item First item in a list 
-	\item Second item in a list 
-	\item Third item in a list
-\end{itemize}
-
-\subsubsection{Uma subseção de terceiro nivel}
-
-Exemplo de uma subseção
-
-\subsection{Tabelas}
-
-Utilize o site http://www.tablesgenerator.com/ para elaborar as tabelas de seu trabalho.
-Para adicionar uma tabela utilize: a tag input, passando o arquivo da tabela como parametro
-
-\input{tab2}
-
-Dentro do arquivo você deve definir o label e pode utilizá-lo para referenciar. Exemplo:
-Na tab \ref{tab2} temos a relação de ....
-
-
-Você também pode modificar a tabela manualmente, incluindo, por exemplo h! dentro de sua definição. Veja no exemplo tab2.tex
-
-\subsection{Figuras}
-
-As figuras podem ser no formato PDF, JPG, PNG. Você pode referenciá-las da mesma maneira que tabelas. Exemplo: A figura \ref{fig1} apresenta.....
-
-Não se preocupe o local em que a figura será renderizada em seu texto. Preocupe-se em criar referência para ela, ou seja, toda figura e tabela deve conter pelo menos uma referência no texto.
-
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{fig1}
-\caption{Exemplo de figura com escala horizontal}
-\label{fig1}
-\end{figure}
-
-
-\begin{figure}
-	\centering
-	\includegraphics[]{fig2}
-	\caption{Exemplo de figura sem escala}
-	\label{fig2}
-\end{figure}
-
-Você pode rotacionar figuras também. Para isso utilize o parâmetro angle=-90. Repare que a escala da figura foi modificada pelo parametro height. Você também pode utilizar scale
-
-\begin{figure}
-	\centering
-	\includegraphics[height=\textwidth,angle=-90]{fig3}
-	\caption{Exemplo de figura rotacionada}
-	\label{fig3}
-\end{figure}
 
 
 %% ***********************************************************************
